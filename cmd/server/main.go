@@ -16,6 +16,7 @@ func (app *App) Run() error {
 	var err error
 	_, err = database.NewDatabase()
 	if err != nil {
+		fmt.Println("-------Re:Gain Error Creating Database-------")
 		return err
 	}
 	handler := transportHandler.NewHandler()
